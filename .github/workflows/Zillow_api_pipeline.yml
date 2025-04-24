@@ -1,0 +1,25 @@
+name: Run Zillow API Pipeline
+
+on:
+  workflow_dispatch:  # allows manual start
+  schedule:
+    - cron: '0 6 * * *'  # runs daily at 6 AM UTC
+
+jobs:
+  run-zillow-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Zillow API Script
+        run: python notebooks/Zillow_API_Extract_Load_Raw.py
