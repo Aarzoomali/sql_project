@@ -1,1 +1,34 @@
-notebooks/.env
+# Hide environment files (store DB credentials, API keys)
+.env
+*.env
+**/.env
+
+# Hide CSVs containing scraped/sensitive data
+*.csv
+
+# Hide all Jupyter notebook checkpoints
+**/.ipynb_checkpoints
+
+# Hide raw Python and notebook scripts that may include secrets or data paths
+notebooks/*.py
+notebooks/*.ipynb
+
+# Hide PDFs that include data pipeline diagrams or analysis output
+data/*.pdf
+reports/*.pdf
+
+# Hide placeholder texts (not sensitive, but unnecessary to track)
+*/placeholder.txt
+
+# Hide common virtual environment folders
+venv/
+.venv/
+env/
+
+# Hide macOS system files
+.DS_Store
+
+# Hide compiled Python files
+__pycache__/
+*.py[cod]
+
