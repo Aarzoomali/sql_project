@@ -82,9 +82,15 @@ Each data source has two visualizations: one descriptive and one diagnostic.
 
 ## 🧠 Future Improvements
 
-- Use NLP to perform sentiment scoring on Reddit post content
-- Add more Zillow metrics (e.g., rent estimates, forecast prices)
-- Automate scraping with time-based cron jobs via GitHub Actions
+Expand Reddit scraping to include top post comments
+
+Collect Zillow data over time to analyze price trends
+
+Add metrics to segment cities by affordability zones
+
+Improve filtering and data cleaning logic for Reddit content
+
+
 
 ---
 
